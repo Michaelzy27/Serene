@@ -29,4 +29,8 @@ contract Serene {
         emit TokenWithdraw(token, address(this), to, amount);
     }
 
+    function tokenBalance(IERC20 token) public view returns(uint balance) {
+        return token.balanceOf(address(this));
+    }
+
 }
